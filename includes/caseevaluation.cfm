@@ -1,27 +1,23 @@
 <cfset showForm = true>
-<!---<cfparam name="form.leadFirstName" default="">
-<cfparam name="form.leadLastName" default="">
-<cfparam name="form.leadEmail" default="">
-<cfparam name="form.leadPhone" default="">
-<cfparam name="form.leadZip" default="">
-<cfparam name="form.leadContent" default="">--->
+
 <div class="form-title">
-<div class="free-banner">Free</div>
-		<cfif isDefined("pageInfo.caseReview") AND pageInfo.caseReview NEQ "">
-			<cfoutput><h3>#pageInfo.caseReview#</h3></cfoutput>
+	<div class="free-banner">Free</div>
+	<cfif isDefined("pageInfo.caseReview") AND pageInfo.caseReview NEQ "">
+		<cfoutput>
+			<h3>#pageInfo.caseReview#</h3>
+		</cfoutput>
 		<cfelse>
-			<h3>FREE Case Evaluation</h3>
-		</cfif>
-		<p>
+		<h3>FREE Case Evaluation</h3>
+	</cfif>
+	<p>
 		<cfif isDefined("pageInfo.calltoaction") AND pageInfo.calltoaction NEQ "">
 			<cfoutput>#pageInfo.calltoaction#</cfoutput>
-		<cfelse>
+			<cfelse>
 			Fill out this form for a FREE, Case Evaluation
 		</cfif>
-		</p>
-	</div>
+	</p>
+</div>
 <div class="sidebar-free-consultation">
-	<!-- start: Contact Form -->
 	<div id="contact-form" class="">
 		<cfform name="Contact" id="Contact" action="" method="post" preservedata="yes">
 			<fieldset>
@@ -51,26 +47,26 @@
 						<cftextarea tabindex="6" name="leadContent" id="leadContent" rows="3" class="input-large color-input span12" required="yes"  message="Details are required." placeholder="Details" />
 					</div>
 				</div>
-				<div class="row-fluid">
+				<div class="row-fluid"> 
 					<!--- Check Project HoneyPot --->
-						<cfset stCheck=application.HoneyPot.honeypotcheck(ip='#CGI.REMOTE_ADDR#')>
-<!---					<cfinvoke returnvariable="stCheck" method="honeypotcheck" component="assets.components.HoneyPotdns">
+					<cfset stCheck=application.HoneyPot.honeypotcheck(ip='#CGI.REMOTE_ADDR#')>
+					<!---					<cfinvoke returnvariable="stCheck" method="honeypotcheck" component="assets.components.HoneyPotdns">
 						<cfinvokeargument name="ip" value="#cgi.remote_addr#" />
 <!---						<cfinvokeargument name="ip" value="66.117.9.99" />--->
-					</cfinvoke>--->
+					</cfinvoke>---> 
 					<!--- Don't display the personal information --->
 					<cfif isDefined("stCheck") AND (stCheck.type GTE 4 AND stCheck.type LTE 7)>
-						  <!--- Send 404 message --->
-					  	<cfheader statuscode="404" statustext="Not Found">
-					  	404 Not Found
-					  	<cfabort>
+						<!--- Send 404 message --->
+						<cfheader statuscode="404" statustext="Not Found">
+						404 Not Found
+						<cfabort>
 					</cfif>
 				</div>
 				<div class="row-fluid">
 					<div class="actions">
 						<cfif isDefined("session.mailsent") AND session.mailsent EQ 1>
 							<cfinput name="submit" type="submit" value="GET HELP NOW" tabindex="8"  id="casesubmit"  class="btn btn-red btn-primary btn-large span12" disabled />
-						<cfelse>
+							<cfelse>
 							<cfinput name="submit" type="submit" value="GET HELP NOW" tabindex="8"  id="casesubmit"  class="btn btn-red btn-primary btn-large span12"  />
 						</cfif>
 					</div>
@@ -87,5 +83,4 @@
 		document.forms["Contact"].action="http://<cfoutput>#CGI.SERVER_NAME#</cfoutput>/contactsend.cfm";
 		document.getElementById("casesubmit").click();
 	</script>
-
 </cfif>
