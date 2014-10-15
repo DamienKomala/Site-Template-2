@@ -1,7 +1,8 @@
 jQuery(document)
     .ready(function ($) {
 		
-		// make code pretty
+        /* -------------------- Styleguide Pretty Code --------------------- */
+		
 		window.prettyPrint && prettyPrint()
 		
 		/* -------------------- IE 10 jQuery Fix for non working tabs --------------------- */
@@ -25,16 +26,15 @@ jQuery(document)
 	
 		$('.tooltip').tooltip()
 		$('.popover').popover()
-	
-		// popover demo
+		
 		$("a[data-toggle=popover]")
-		  .popover()
-		  .click(function(e) {
-			e.preventDefault()
-		 });
+			.popover()
+			.click(function(e) {
+				e.preventDefault()
+		});
 		 
-		 $('.workers-comp').tooltip({
-		  selector: "a[data-toggle=tooltip]"
+		$('.workers-comp').tooltip({
+			selector: "a[data-toggle=tooltip]"
 		}),
 		$('.logos').tooltip({
 		  selector: "a[data-toggle=tooltip]"
@@ -52,7 +52,6 @@ jQuery(document)
 
         /* ------------------- Socialite JS Addition --------------------- */
 
-		/*Socialite.load(context);*/
 		Socialite.load($(this)[0]);
 
         /* ------------------- Animated Carousel --------------------- */
@@ -165,6 +164,7 @@ jQuery(document)
 		$('h4').removeAttr('style');
 		
         /* ------------------- Lightbox Effect --------------------- */
+		
 		$('#demo1').iLightBox({
 			skin: 'mac',
 			fullViewPort: 'fill',
