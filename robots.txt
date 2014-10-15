@@ -1,4 +1,0 @@
-User-agent: *
-Allow: /
-
-#uncomment the following and fix url: Sitemap: http://www.mikelewisattorneys.com/sitemap.xml
