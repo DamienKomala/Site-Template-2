@@ -68,6 +68,17 @@ jQuery(document)
 		$('#testimonials-carousel').hover(function () {   
   			$(this).carousel('pause');
 		}),
+		
+		/* ------------------- Open all Accordions --------------------- */
+
+		$('.content .closeall').click(function(){
+		$('.content .accordion-body.in')
+			.collapse('hide');
+		});
+		$('.content .openall').click(function(){
+		$('.content .accordion-body:not(".in")')
+			.collapse('show');
+		});
 
         /* -------------------- Placeholder fix that stupid and outdated browser, IE --------------------- */
 
