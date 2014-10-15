@@ -5,12 +5,11 @@
 	<div class="container content">
 		<div class="row-fluid">
 			<section class="span8">
-				<div class="center-content">
-				<!---Un-comment if styles and scripts aren't loaded for Prettify formatting--->
+				<div class="center-content"> 
+					<!---Un-comment if styles and scripts aren't loaded for Prettify formatting--->
 					<link href="/css/prettify.css" rel="stylesheet">
-					<script src="/js/prettify.js"></script>
+					<script src="/js/prettify.js"></script> 
 					<script src="/js/holder.js"></script>
-
 					<h1>HTML Styleguide</h1>
 					<section id="typography">
 						<div class="page-header">
@@ -464,7 +463,8 @@
 						<hr class="bs-docs-separator">
 						<div class="bs-docs-example" id="jumpmenu">
 							<p>
-							<div class="feature-right"><h3>Jump to:</h3>
+							<div class="feature-right">
+								<h3>Jump to:</h3>
 								<ul>
 									<li><a href="#typography">Typography</a></li>
 									<li><a href="#anchors">Anchors</a></li>
@@ -502,7 +502,7 @@
   &lt;/ul&gt;
 &lt;/div&gt;
 </pre>
-					<hr class="bs-docs-separator">
+						<hr class="bs-docs-separator">
 						<div class="bs-docs-example">
 							<p>
 							<div class="feature-left feature-long">2/3rds length left floating Feature box.</div>
@@ -707,43 +707,42 @@
 						<p>This shows the four examples of the lightbox themes. Each has it's own ID (demo1, demo2, demo3, demo4).</p>
 						<div class="bs-docs-example">
 							<div class="row-fluid">
-							<div class="span3">
-								<div class="videos"><a class="ilightbox" href='http://player.vimeo.com/video/77088391?autoplay=1'
+								<div class="span3">
+									<div class="videos"><a class="ilightbox" href='http://player.vimeo.com/video/77088391?autoplay=1'
 											id="demo1"
 											data-type="iframe"
 											data-options="width: 800, height: 450"><span class="play" ></span><img src="https://secure-b.vimeocdn.com/ts/452/162/452162109_150.jpg" alt="video1" /></a></div>
-								<div class="item-description alt">
-									<h5>Video Caption - Mac Theme Lightbox</h5>
+									<div class="item-description alt">
+										<h5>Video Caption - Mac Theme Lightbox</h5>
+									</div>
 								</div>
-							</div>
-							<div class="span3">
-								<div class="videos"><a class="ilightbox" href='http://player.vimeo.com/video/77088391?autoplay=1'
+								<div class="span3">
+									<div class="videos"><a class="ilightbox" href='http://player.vimeo.com/video/77088391?autoplay=1'
 											id="demo2"
 											data-type="iframe"
 											data-options="width: 800, height: 450"><span class="play" ></span><img src="https://secure-b.vimeocdn.com/ts/452/162/452162109_150.jpg" alt="video1" /></a></div>
-								<div class="item-description alt">
-									<h5>Video Caption - Smooth Theme Lightbox</h5>
+									<div class="item-description alt">
+										<h5>Video Caption - Smooth Theme Lightbox</h5>
+									</div>
 								</div>
-							</div>
-							<div class="span3">
-								<div class="videos"><a class="ilightbox" href='http://player.vimeo.com/video/77088391?autoplay=1'
+								<div class="span3">
+									<div class="videos"><a class="ilightbox" href='http://player.vimeo.com/video/77088391?autoplay=1'
 											id="demo3"
 											data-type="iframe"
 											data-options="width: 800, height: 450"><span class="play" ></span><img src="https://secure-b.vimeocdn.com/ts/452/162/452162109_150.jpg" alt="video1" /></a></div>
-								<div class="item-description alt">
-									<h5>Video Caption - Dark Theme Lightbox</h5>
+									<div class="item-description alt">
+										<h5>Video Caption - Dark Theme Lightbox</h5>
+									</div>
 								</div>
-							</div>
-							<div class="span3">
-								<div class="videos"><a class="ilightbox" href='http://player.vimeo.com/video/77088391?autoplay=1'
+								<div class="span3">
+									<div class="videos"><a class="ilightbox" href='http://player.vimeo.com/video/77088391?autoplay=1'
 											id="demo4"
 											data-type="iframe"
 											data-options="width: 800, height: 450"><span class="play" ></span><img src="https://secure-b.vimeocdn.com/ts/452/162/452162109_150.jpg" alt="video1" /></a></div>
-								<div class="item-description alt">
-									<h5>Video Caption - Light Theme Lightbox</h5>
+									<div class="item-description alt">
+										<h5>Video Caption - Light Theme Lightbox</h5>
+									</div>
 								</div>
-							</div>
-							
 							</div>
 						</div>
 						<pre class="prettyprint linenums">
@@ -757,99 +756,79 @@
 &lt;/div&gt;</pre>
 					</section>
 					<section id="popovers">
-        <div class="page-header">
-          <h1>Popovers <small>bootstrap-popover.js</small></h1>
-        </div>
-
-        <h2>Examples</h2>
-        <p>Add small overlays of content, like those on the iPad, to any element for housing secondary information. Hover over the button to trigger the popover. <strong>Requires <a href="#tooltips">Tooltip</a> to be included.</strong></p>
-
-        <h3>Static popover</h3>
-        <p>Four options are available: top, right, bottom, and left aligned.</p>
-        <div class="bs-docs-example bs-docs-example-popover">
-          <div class="popover top">
-            <div class="arrow"></div>
-            <h3 class="popover-title">Popover top</h3>
-            <div class="popover-content">
-              <p>Sed posuere consectetur est at lobortis. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.</p>
-            </div>
-          </div>
-
-          <div class="popover right">
-            <div class="arrow"></div>
-            <h3 class="popover-title">Popover right</h3>
-            <div class="popover-content">
-              <p>Sed posuere consectetur est at lobortis. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.</p>
-            </div>
-          </div>
-
-          <div class="popover bottom">
-            <div class="arrow"></div>
-            <h3 class="popover-title">Popover bottom</h3>
-            <div class="popover-content">
-              <p>Sed posuere consectetur est at lobortis. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.</p>
-            </div>
-          </div>
-
-          <div class="popover left">
-            <div class="arrow"></div>
-            <h3 class="popover-title">Popover left</h3>
-            <div class="popover-content">
-              <p>Sed posuere consectetur est at lobortis. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.</p>
-            </div>
-          </div>
-
-          <div class="clearfix"></div>
-        </div>
-        <p>No markup shown as popovers are generated from JavaScript and content within a <code>data</code> attribute.</p>
-
-        <h3>Live demo</h3>
-        <div class="bs-docs-example" style="padding-bottom: 24px;">
-          <a href="#" class="btn btn-large btn-danger" data-toggle="popover" title="A Title" data-content="And here's some amazing content. It's very engaging. right?">Click to toggle popover</a>
-        </div>
-
-        <h4>Four directions</h4>
-        <div class="bs-docs-example tooltip-demo">
-          <ul class="bs-docs-tooltip-examples">
-            <li><a href="#" class="btn" data-toggle="popover" data-placement="top" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus." title="Popover on top">Popover on top</a></li>
-            <li><a href="#" class="btn" data-toggle="popover" data-placement="right" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus." title="Popover on right">Popover on right</a></li>
-            <li><a href="#" class="btn" data-toggle="popover" data-placement="bottom" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus." title="Popover on bottom">Popover on bottom</a></li>
-            <li><a href="#" class="btn" data-toggle="popover" data-placement="left" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus." title="Popover on left">Popover on left</a></li>
-          </ul>
-        </div>
-
-
-        <hr class="bs-docs-separator">
-
-
-        <h2>Usage</h2>
-        <p>Enable popovers via JavaScript:</p>
-        <pre class="prettyprint linenums">$('#example').popover(options)</pre>
-        <div class="alert alert-info">
-          <strong>Heads up!</strong>
-          Options for individual popovers can alternatively be specified through the use of data attributes.
-        </div>
-
-        <h3>Markup</h3>
-        <p>For performance reasons, the Tooltip and Popover data-apis are opt in. If you would like to use them just specify a selector option.</p>
-
-        <h3>Methods</h3>
-        <h4>$().popover(options)</h4>
-        <p>Initializes popovers for an element collection.</p>
-        <h4>.popover('show')</h4>
-        <p>Reveals an elements popover.</p>
-        <pre class="prettyprint linenums">$('#element').popover('show')</pre>
-        <h4>.popover('hide')</h4>
-        <p>Hides an elements popover.</p>
-        <pre class="prettyprint linenums">$('#element').popover('hide')</pre>
-        <h4>.popover('toggle')</h4>
-        <p>Toggles an elements popover.</p>
-        <pre class="prettyprint linenums">$('#element').popover('toggle')</pre>
-        <h4>.popover('destroy')</h4>
-        <p>Hides and destroys an element's popover.</p>
-        <pre class="prettyprint linenums">$('#element').popover('destroy')</pre>
-      </section>
-					<p id="back-top"><a href="#top">Back to Top</a></p>
+						<div class="page-header">
+							<h1>Popovers <small>bootstrap-popover.js</small></h1>
+						</div>
+						<h2>Examples</h2>
+						<p>Add small overlays of content, like those on the iPad, to any element for housing secondary information. Hover over the button to trigger the popover. <strong>Requires <a href="#tooltips">Tooltip</a> to be included.</strong></p>
+						<h3>Static popover</h3>
+						<p>Four options are available: top, right, bottom, and left aligned.</p>
+						<div class="bs-docs-example bs-docs-example-popover">
+							<div class="popover top">
+								<div class="arrow"></div>
+								<h3 class="popover-title">Popover top</h3>
+								<div class="popover-content">
+									<p>Sed posuere consectetur est at lobortis. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.</p>
+								</div>
+							</div>
+							<div class="popover right">
+								<div class="arrow"></div>
+								<h3 class="popover-title">Popover right</h3>
+								<div class="popover-content">
+									<p>Sed posuere consectetur est at lobortis. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.</p>
+								</div>
+							</div>
+							<div class="popover bottom">
+								<div class="arrow"></div>
+								<h3 class="popover-title">Popover bottom</h3>
+								<div class="popover-content">
+									<p>Sed posuere consectetur est at lobortis. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.</p>
+								</div>
+							</div>
+							<div class="popover left">
+								<div class="arrow"></div>
+								<h3 class="popover-title">Popover left</h3>
+								<div class="popover-content">
+									<p>Sed posuere consectetur est at lobortis. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.</p>
+								</div>
+							</div>
+							<div class="clearfix"></div>
+						</div>
+						<p>No markup shown as popovers are generated from JavaScript and content within a <code>data</code> attribute.</p>
+						<h3>Live demo</h3>
+						<div class="bs-docs-example" style="padding-bottom: 24px;"> <a href="#" class="btn btn-large btn-danger" data-toggle="popover" title="A Title" data-content="And here's some amazing content. It's very engaging. right?">Click to toggle popover</a> </div>
+						<h4>Four directions</h4>
+						<div class="bs-docs-example tooltip-demo">
+							<ul class="bs-docs-tooltip-examples">
+								<li><a href="#" class="btn" data-toggle="popover" data-placement="top" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus." title="Popover on top">Popover on top</a></li>
+								<li><a href="#" class="btn" data-toggle="popover" data-placement="right" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus." title="Popover on right">Popover on right</a></li>
+								<li><a href="#" class="btn" data-toggle="popover" data-placement="bottom" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus." title="Popover on bottom">Popover on bottom</a></li>
+								<li><a href="#" class="btn" data-toggle="popover" data-placement="left" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus." title="Popover on left">Popover on left</a></li>
+							</ul>
+						</div>
+						<hr class="bs-docs-separator">
+						<h2>Usage</h2>
+						<p>Enable popovers via JavaScript:</p>
+						<pre class="prettyprint linenums">$('#example').popover(options)</pre>
+						<div class="alert alert-info"> <strong>Heads up!</strong> Options for individual popovers can alternatively be specified through the use of data attributes. </div>
+						<h3>Markup</h3>
+						<p>For performance reasons, the Tooltip and Popover data-apis are opt in. If you would like to use them just specify a selector option.</p>
+						<h3>Methods</h3>
+						<h4>$().popover(options)</h4>
+						<p>Initializes popovers for an element collection.</p>
+						<h4>.popover('show')</h4>
+						<p>Reveals an elements popover.</p>
+						<pre class="prettyprint linenums">$('#element').popover('show')</pre>
+						<h4>.popover('hide')</h4>
+						<p>Hides an elements popover.</p>
+						<pre class="prettyprint linenums">$('#element').popover('hide')</pre>
+						<h4>.popover('toggle')</h4>
+						<p>Toggles an elements popover.</p>
+						<pre class="prettyprint linenums">$('#element').popover('toggle')</pre>
+						<h4>.popover('destroy')</h4>
+						<p>Hides and destroys an element's popover.</p>
+						<pre class="prettyprint linenums">$('#element').popover('destroy')</pre>
+					</section>
 				</div>
 			</section>
 			<div class="span3 bs-docs-sidebar">
@@ -869,6 +848,9 @@
 					<li><a href="#lightbox"><i class="icon-chevron-right"></i> Lightbox Videos</a></li>
 					<li><a href="#popovers"><i class="icon-chevron-right"></i> Popover</a></li>
 				</ul>
+			</div>
+			<div class="row-fluid">
+				<div class="span12" id="back-top"><a href="##top" class="back-to-top">Back to Top</a></div>
 			</div>
 		</div>
 	</div>
