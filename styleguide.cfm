@@ -585,7 +585,10 @@
 						<div class="page-header">
 							<h1>Accordion<small> used for FAQ's and Case Results</small></h1>
 						</div>
-						<div class=""><a class="btn btn-default openall">open all</a> <a class="btn btn-default closeall">close all</a></div>
+						    <div class="btn-group">
+								<a class="btn btn-default btn-small btn-inverse openall">Open All <i class="icon-plus-sign icon-white"></i></a>
+								<a class="btn btn-default btn-small btn-inverse closeall">Close All <i class="icon-minus-sign icon-white"></i></a>
+							</div>
 						<div class="bs-docs-example">
 							<div class="accordion" id="accordion_name">
 								<div class="accordion-group">
