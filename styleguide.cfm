@@ -6,8 +6,11 @@
 		<div class="row-fluid">
 			<section class="span8">
 				<div class="center-content">
+				<!---Un-comment if styles and scripts aren't loaded for Prettify formatting--->
 					<link href="/css/prettify.css" rel="stylesheet">
 					<script src="/js/prettify.js"></script>
+					<script src="/js/holder.js"></script>
+
 					<h1>HTML Styleguide</h1>
 					<section id="typography">
 						<div class="page-header">
@@ -33,8 +36,7 @@
 						<div class="bs-docs-example">
 							<p><small>This line of text is meant to be treated as fine print.</small></p>
 						</div>
-						<pre class="prettyprint">
-&lt;p&gt;
+						<pre class="prettyprint">&lt;p&gt;
   &lt;small&gt;This line of text is meant to be treated as fine print.&lt;/small&gt;
 &lt;/p&gt;
 </pre>
@@ -151,8 +153,10 @@
 								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
 								<small>Someone famous in <cite title="Source Title">Source Title</cite></small> </blockquote>
 						</div>
-						<pre class="prettyprint linenums">&lt;blockquote class="right"&gt;
-	...
+						<pre class="prettyprint linenums">
+&lt;blockquote class=&quot;right&quot;&gt;
+ She was patient, professional and a hard worker. I would recommend her to anyone who needs a hard-working, professional, and respectful PI/PC attorney. 
+ &lt;small&gt;U. Crawford&lt;/small&gt;
 &lt;/blockquote&gt;</pre>
 						<p>Use <code>.left</code> for a left floating blockquote.</p>
 						<div class="bs-docs-example" style="overflow: hidden;">
@@ -458,15 +462,60 @@
 &lt;/div&gt;
 </pre>
 						<hr class="bs-docs-separator">
-						<div class="bs-docs-example">
+						<div class="bs-docs-example" id="jumpmenu">
 							<p>
-							<div class="feature-right">Right Feature box for navigation or floating wells</div>
+							<div class="feature-right"><h3>Jump to:</h3>
+								<ul>
+									<li><a href="#typography">Typography</a></li>
+									<li><a href="#anchors">Anchors</a></li>
+									<li><a href="#lists">Lists</a></li>
+									<li><a href="#images">Images</a></li>
+									<li><a href="#columns">Columns</a></li>
+									<li><a href="#modals">Modal</a></li>
+									<li><a href="#misc">Wells</a></li>
+									<li><a href="#tabs">Tab</a></li>
+									<li><a href="#collapse">Accordions</a></li>
+									<li><a href="#carousel">Carousel</a></li>
+									<li><a href="#lightbox">Lightbox Videos</a></li>
+									<li><a href="#popovers">Popover</a></li>
+								</ul>
+							</div>
 							Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.
 							</p>
 							<hr class="bs-docs-separator">
 						</div>
 						<pre class="prettyprint linenums">
-&lt;div class="feature-right"&gt;
+&lt;div class=&quot;feature-right&quot;&gt;&lt;h3&gt;Jump Menu&lt;/h3&gt;
+   &lt;ul&gt;
+     &lt;li&gt;&lt;a href=&quot;#typography&quot;&gt;Typography&lt;/a&gt;&lt;/li&gt;
+     &lt;li&gt;&lt;a href=&quot;#anchors&quot;&gt;Anchors&lt;/a&gt;&lt;/li&gt;
+     &lt;li&gt;&lt;a href=&quot;#lists&quot;&gt;Lists&lt;/a&gt;&lt;/li&gt;
+     &lt;li&gt;&lt;a href=&quot;#images&quot;&gt;Images&lt;/a&gt;&lt;/li&gt;
+     &lt;li&gt;&lt;a href=&quot;#columns&quot;&gt;Columns&lt;/a&gt;&lt;/li&gt;
+     &lt;li&gt;&lt;a href=&quot;#modals&quot;&gt;Modal&lt;/a&gt;&lt;/li&gt;
+     &lt;li&gt;&lt;a href=&quot;#misc&quot;&gt;Wells&lt;/a&gt;&lt;/li&gt;
+     &lt;li&gt;&lt;a href=&quot;#tabs&quot;&gt;Tab&lt;/a&gt;&lt;/li&gt;
+     &lt;li&gt;&lt;a href=&quot;#collapse&quot;&gt;Accordions&lt;/a&gt;&lt;/li&gt;
+     &lt;li&gt;&lt;a href=&quot;#carousel&quot;&gt;Carousel&lt;/a&gt;&lt;/li&gt;
+     &lt;li&gt;&lt;a href=&quot;#lightbox&quot;&gt;Lightbox Videos&lt;/a&gt;&lt;/li&gt;
+     &lt;li&gt;&lt;a href=&quot;#popovers&quot;&gt;Popover&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;
+</pre>
+					<hr class="bs-docs-separator">
+						<div class="bs-docs-example">
+							<p>
+							<div class="feature-left feature-long">2/3rds length left floating Feature box.</div>
+							Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.
+							</p>
+							<p>
+							<div class="feature-right feature-long">2/3rds length right floating Feature box.</div>
+							Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.
+							</p>
+							<hr class="bs-docs-separator">
+						</div>
+						<pre class="prettyprint linenums">
+&lt;div class="feature-right feature-long"&gt;
   ...
 &lt;/div&gt;
 </pre>
@@ -536,6 +585,7 @@
 						<div class="page-header">
 							<h1>Accordion<small> used for FAQ's and Case Results</small></h1>
 						</div>
+						<div class=""><a class="btn btn-default openall">open all</a> <a class="btn btn-default closeall">close all</a></div>
 						<div class="bs-docs-example">
 							<div class="accordion" id="accordion_name">
 								<div class="accordion-group">
@@ -706,24 +756,118 @@
   &lt;h5&gt;Video Caption - Mac Theme Lightbox&lt;/h5&gt;
 &lt;/div&gt;</pre>
 					</section>
-					<cfinclude template="includes/socialite.cfm">
+					<section id="popovers">
+        <div class="page-header">
+          <h1>Popovers <small>bootstrap-popover.js</small></h1>
+        </div>
+
+        <h2>Examples</h2>
+        <p>Add small overlays of content, like those on the iPad, to any element for housing secondary information. Hover over the button to trigger the popover. <strong>Requires <a href="#tooltips">Tooltip</a> to be included.</strong></p>
+
+        <h3>Static popover</h3>
+        <p>Four options are available: top, right, bottom, and left aligned.</p>
+        <div class="bs-docs-example bs-docs-example-popover">
+          <div class="popover top">
+            <div class="arrow"></div>
+            <h3 class="popover-title">Popover top</h3>
+            <div class="popover-content">
+              <p>Sed posuere consectetur est at lobortis. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.</p>
+            </div>
+          </div>
+
+          <div class="popover right">
+            <div class="arrow"></div>
+            <h3 class="popover-title">Popover right</h3>
+            <div class="popover-content">
+              <p>Sed posuere consectetur est at lobortis. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.</p>
+            </div>
+          </div>
+
+          <div class="popover bottom">
+            <div class="arrow"></div>
+            <h3 class="popover-title">Popover bottom</h3>
+            <div class="popover-content">
+              <p>Sed posuere consectetur est at lobortis. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.</p>
+            </div>
+          </div>
+
+          <div class="popover left">
+            <div class="arrow"></div>
+            <h3 class="popover-title">Popover left</h3>
+            <div class="popover-content">
+              <p>Sed posuere consectetur est at lobortis. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.</p>
+            </div>
+          </div>
+
+          <div class="clearfix"></div>
+        </div>
+        <p>No markup shown as popovers are generated from JavaScript and content within a <code>data</code> attribute.</p>
+
+        <h3>Live demo</h3>
+        <div class="bs-docs-example" style="padding-bottom: 24px;">
+          <a href="#" class="btn btn-large btn-danger" data-toggle="popover" title="A Title" data-content="And here's some amazing content. It's very engaging. right?">Click to toggle popover</a>
+        </div>
+
+        <h4>Four directions</h4>
+        <div class="bs-docs-example tooltip-demo">
+          <ul class="bs-docs-tooltip-examples">
+            <li><a href="#" class="btn" data-toggle="popover" data-placement="top" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus." title="Popover on top">Popover on top</a></li>
+            <li><a href="#" class="btn" data-toggle="popover" data-placement="right" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus." title="Popover on right">Popover on right</a></li>
+            <li><a href="#" class="btn" data-toggle="popover" data-placement="bottom" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus." title="Popover on bottom">Popover on bottom</a></li>
+            <li><a href="#" class="btn" data-toggle="popover" data-placement="left" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus." title="Popover on left">Popover on left</a></li>
+          </ul>
+        </div>
+
+
+        <hr class="bs-docs-separator">
+
+
+        <h2>Usage</h2>
+        <p>Enable popovers via JavaScript:</p>
+        <pre class="prettyprint linenums">$('#example').popover(options)</pre>
+        <div class="alert alert-info">
+          <strong>Heads up!</strong>
+          Options for individual popovers can alternatively be specified through the use of data attributes.
+        </div>
+
+        <h3>Markup</h3>
+        <p>For performance reasons, the Tooltip and Popover data-apis are opt in. If you would like to use them just specify a selector option.</p>
+
+        <h3>Methods</h3>
+        <h4>$().popover(options)</h4>
+        <p>Initializes popovers for an element collection.</p>
+        <h4>.popover('show')</h4>
+        <p>Reveals an elements popover.</p>
+        <pre class="prettyprint linenums">$('#element').popover('show')</pre>
+        <h4>.popover('hide')</h4>
+        <p>Hides an elements popover.</p>
+        <pre class="prettyprint linenums">$('#element').popover('hide')</pre>
+        <h4>.popover('toggle')</h4>
+        <p>Toggles an elements popover.</p>
+        <pre class="prettyprint linenums">$('#element').popover('toggle')</pre>
+        <h4>.popover('destroy')</h4>
+        <p>Hides and destroys an element's popover.</p>
+        <pre class="prettyprint linenums">$('#element').popover('destroy')</pre>
+      </section>
 					<p id="back-top"><a href="#top">Back to Top</a></p>
 				</div>
 			</section>
-			<!---<cfinclude template="includes/sidebar.cfm">--->
 			<div class="span3 bs-docs-sidebar">
 				<ul class="nav nav-list bs-docs-sidenav affix">
 					<li><a href="#typography"><i class="icon-chevron-right"></i> Typography</a></li>
+					<li><a href="#blockquotes"><i class="icon-chevron-right"></i> Blockquotes</a></li>
 					<li><a href="#anchors"><i class="icon-chevron-right"></i> Anchors</a></li>
 					<li><a href="#lists"><i class="icon-chevron-right"></i> Lists</a></li>
 					<li><a href="#images"><i class="icon-chevron-right"></i> Images</a></li>
 					<li><a href="#columns"><i class="icon-chevron-right"></i> Columns</a></li>
 					<li><a href="#modals"><i class="icon-chevron-right"></i> Modal</a></li>
 					<li><a href="#misc"><i class="icon-chevron-right"></i> Wells</a></li>
+					<li><a href="#jumpmenu"><i class="icon-chevron-right"></i> Jump Menus</a></li>
 					<li><a href="#tabs"><i class="icon-chevron-right"></i> Tab</a></li>
 					<li><a href="#collapse"><i class="icon-chevron-right"></i> Accordions</a></li>
 					<li><a href="#carousel"><i class="icon-chevron-right"></i> Carousel</a></li>
 					<li><a href="#lightbox"><i class="icon-chevron-right"></i> Lightbox Videos</a></li>
+					<li><a href="#popovers"><i class="icon-chevron-right"></i> Popover</a></li>
 				</ul>
 			</div>
 		</div>
