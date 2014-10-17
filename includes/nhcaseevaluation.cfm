@@ -1,10 +1,4 @@
 <cfset showForm = true>
-<!---<cfparam name="form.leadFirstName" default="">
-<cfparam name="form.leadLastName" default="">
-<cfparam name="form.leadEmail" default="">
-<cfparam name="form.leadPhone" default="">
-<cfparam name="form.leadZip" default="">
-<cfparam name="form.leadContent" default="">--->
 <div class="form-title">
 <div class="free-banner">Free</div>
 		<cfif isDefined("pageInfo.caseReview") AND pageInfo.caseReview NEQ "">

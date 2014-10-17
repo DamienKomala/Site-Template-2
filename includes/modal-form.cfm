@@ -1,4 +1,5 @@
 <cfset showForm = true>
+
 <div class="form-title">
 	<div class="free-banner">Free</div>
 	<cfif isDefined("pageInfo.caseReview") AND pageInfo.caseReview NEQ "">
@@ -16,8 +17,7 @@
 		</cfif>
 	</p>
 </div>
-<div class="sidebar-free-consultation"> 
-	<!-- start: Contact Form -->
+<div class="sidebar-free-consultation">
 	<div id="modal-contact-form" class="">
 		<cfform name="Contact" id="ModalContact" action="" method="post" preservedata="yes">
 			<fieldset>

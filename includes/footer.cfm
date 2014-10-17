@@ -9,7 +9,6 @@
 			</div>
 			<div class="span6 pull-right">
 				<p class="phone">Call Us Toll Free <br>
-<!---					<a href="tel:18662075437">866.207.5437</a></p>--->
 				<a href="tel:18662991769">866-299-1769</a></p>
 				<cfinclude template="social-media.cfm">
 			</div>

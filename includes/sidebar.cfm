@@ -24,9 +24,6 @@
 			<a href="#" data-toggle="tooltip" class="tool-tip" data-placement="top" title="Selected for North Carolina Super Lawyer 2013"><img src="/images/sidebar-logos/superlawyers.jpg" alt="SuperLawyers"/></a>
 			<!---<a href="#" data-toggle="tooltip" class="tool-tip" data-placement="top" title="text_needed"><img src="/images/sidebar-logos/goldaward.jpg" alt="sidebar_logo"/></a>--->
 		</div>
-		<cfif (IsDefined('contentid')) AND (contentid EQ '9069' or contentid EQ '9078' or contentid EQ '9015' or contentid EQ '9320') >
-		<cfinclude template="ncregs1.cfm">
-		</cfif>
 		<cfif (isDefined("contentid") AND contentid EQ application.exceptions['blgID']) OR isDefined("catid") OR isDefined("blogid") OR isDefined("date")>
 			<!---		<cfinclude template="calendar.cfm">--->
 			<cfinclude template="blogcategories.cfm">
