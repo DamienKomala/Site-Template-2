@@ -801,6 +801,9 @@ blockquote.right {
 	float: right;
 	margin:0 0 20px 20px;
 }
+p.well {
+	text-align:center;
+}
 
 /*********************************************************************
 	Testimonials Blockquote
