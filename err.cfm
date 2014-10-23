@@ -1,3 +1,5 @@
+<cfheader statuscode="404" statustext="File Not Found">
+
 <cfif isDefined("contentid") AND contentid EQ application.exceptions["settlementID"]>
 	<cfset settlements=application.pageData.getSettlements()>
 </cfif>
