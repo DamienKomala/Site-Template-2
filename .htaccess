@@ -827,6 +827,9 @@ RewriteRule ^/blog/gm-identifies-safety-defects-in-chevrolet-impalas-and-cadilla
 
 RewriteRule ^/blog/938000-ford-sedans-under-nhtsa-investigation.html$ /interior.cfm?blogid=9954 [NC]
 RewriteRule ^/blog/938000-ford-sedans-under-nhtsa-investigation.html(.*)$ /interior.cfm$1&blogid=9954 [NC]
+RewriteRule ^/thanks.html$ /interior.cfm?contentid=9902 [NC]
+RewriteRule ^/unsub.html(.*)$ /interior.cfm$1&contentid=9903 [NC]
+
 
 
 

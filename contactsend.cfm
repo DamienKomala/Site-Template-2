@@ -28,7 +28,7 @@
 		</cfif>
 	</cfif>
 	
-	<cfset testList="pnash@pmpmg.com|darahood@pmpmg.com|test@pmpmg.com">
+	<cfset testList="test@pmpmg.com">
 	<cfquery name="insLeads" datasource="#application.datasource1#">
 		INSERT INTO leads (leads_firstname, leads_lastname, leads_zip, leads_email, leads_phone, leads_content, leads_entereddate, leads_referpage, leads_clientid, leads_site, leads_siteid, leads_status, leads_tracking, leads_googleid, leads_google, leads_ip, leads_lastmodified, leads_browser, leads_ppc, leads_category)
 		VALUES (
@@ -188,7 +188,7 @@ The information that he or she provided is below: <br /><br />
 	
 <hr />
 	<cfif isDefined("UsersTo")>
-		<strong>This Notification was sent to:</strong><br />#Replace(UsersTo,",","<br />","ALL")#<br /><br />
+		<strong>This Notification was sent to:</strong><br />#Replace(UsersTo,",","<br />","ALL")#<br /><br /> - Test Only - Not sent to these users. 
 	</cfif>
 	</cfmail>
 </cfif>
@@ -206,4 +206,9 @@ username = "leads"
 password = "coke18!!">
 #body#
 </cfmail>
+
+<cfif isdefined("session.mailsent")>
+	<cfset session.mailsent = 1>
+</cfif>
+
 <cflocation url="#LeadData.ReferalType.referalemailtype_redirectpage#" addtoken="no">

@@ -5,6 +5,7 @@
 </cfif>
 <cfinclude template="includes/head.cfm">
 <body class="home">
+
 <cfinclude template="includes/header.cfm">
 <div id="wrapper">
 	<div class="container content">

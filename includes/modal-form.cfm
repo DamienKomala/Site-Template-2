@@ -19,32 +19,32 @@
 </div>
 <div class="sidebar-free-consultation">
 	<div id="modal-contact-form" class="">
-		<cfform name="Contact" id="ModalContact" action="" method="post" preservedata="yes">
+		<cfform name="Contact" id="ModalContact" action="contactleadcheck.cfm" method="post" preservedata="yes">
 			<fieldset>
 				<div class="row-fluid">
 					<div class="span6 infield-label">
-						<cfinput tabindex="1" name="leadFirstName" id="modalFirstName" type="text" maxlength="50" class="input-large color-input span12" required="yes" message="First Name is required." placeholder="First Name" title="First Name" />
+						<cfinput tabindex="15" name="leadFirstName" id="modalFirstName" type="text" maxlength="50" class="input-large color-input span12" required="yes" message="First Name is required." placeholder="First Name" title="First Name" />
 					</div>
 					<div class="span6 infield-label">
-						<cfinput tabindex="2" name="leadLastName" id="modalLastName" type="text" maxlength="50" class="input-large color-input span12" required="yes" message="Last Name is required." placeholder="Last Name" title="Last Name" />
-					</div>
-				</div>
-				<div class="row-fluid">
-					<div class="span6 infield-label">
-						<cfinput tabindex="3" name="leadEmail" id="modalEmail" type="text" maxlength="254" class="input-large color-input span12" required="yes" message="A Valid email address is required." validate="email" validateat="onSubmit" placeholder="Email" title="Email" />
-					</div>
-					<div class="span6 infield-label">
-						<cfinput tabindex="4" name="leadPhone" id="modalPhone" type="text" maxlength="12" class="input-large color-input span12" required="yes" message="A valid phone number is required." validate="telephone" validateat="onsubmit" placeholder="Phone" title="Phone" />
+						<cfinput tabindex="16" name="leadLastName" id="modalLastName" type="text" maxlength="50" class="input-large color-input span12" required="yes" message="Last Name is required." placeholder="Last Name" title="Last Name" />
 					</div>
 				</div>
 				<div class="row-fluid">
 					<div class="span6 infield-label">
-						<cfinput tabindex="5" name="leadZip" id="modalZip" type="text" maxlength="5" class="input-large color-input span12" required="yes" message="A valid zipcode is required." validate="zipcode" validateat="onsubmit" placeholder="Zip" title="Zip" />
+						<cfinput tabindex="17" name="leadEmail" id="modalEmail" type="text" maxlength="254" class="input-large color-input span12" required="yes" message="A Valid email address is required." validate="email" validateat="onSubmit" placeholder="Email" title="Email" />
+					</div>
+					<div class="span6 infield-label">
+						<cfinput tabindex="18" name="leadPhone" id="modalPhone" type="text" maxlength="12" class="input-large color-input span12" required="yes" message="A valid phone number is required." validate="regex" pattern="^\(?(\d{3})\)?[- ._]?(\d{3})[- ._]?(\d{4})$" validateat="onsubmit" placeholder="Phone" title="Phone" />
+					</div>
+				</div>
+				<div class="row-fluid">
+					<div class="span6 infield-label">
+						<cfinput tabindex="19" name="leadZip" id="modalZip" type="text" maxlength="5" class="input-large color-input span12" required="yes" message="A valid zipcode is required." validate="zipcode" validateat="onsubmit" placeholder="Zip" title="Zip" />
 					</div>
 				</div>
 				<div class="row-fluid">
 					<div class="span12 infield-label">
-						<cftextarea tabindex="6" name="leadContent" id="modalContent" rows="3" class="input-large color-input span12" required="yes"  message="Details are required." placeholder="Details" />
+						<cftextarea tabindex="20" name="leadContent" id="modalContent" rows="3" class="input-large color-input span12" required="yes"  message="Details are required." validate="regex" pattern="[A-Za-z0-9]+" placeholder="Details" />
 					</div>
 				</div>
 				<div class="row-fluid"> 
@@ -59,9 +59,9 @@
 				<div class="row-fluid">
 					<div class="actions">
 						<cfif isDefined("session.mailsent") AND session.mailsent EQ 1>
-							<cfinput name="submit" type="submit" value="GET HELP NOW" tabindex="8"  id="Modalcasesubmit"  class="btn btn-red btn-primary btn-large span12" disabled />
+							<cfinput name="submit" type="submit" value="GET HELP NOW" tabindex="21"  id="Modalcasesubmit"  class="btn btn-red btn-primary btn-large span12" disabled />
 							<cfelse>
-							<cfinput name="submit" type="submit" value="GET HELP NOW" tabindex="8"  id="Modalcasesubmit"  class="btn btn-red btn-primary btn-large span12"  />
+							<cfinput name="submit" type="submit" value="GET HELP NOW" tabindex="21"  id="Modalcasesubmit"  class="btn btn-red btn-primary btn-large span12"  />
 						</cfif>
 					</div>
 				</div>

@@ -77,6 +77,8 @@
 						#Replace(pageinfo.body2,'{server_name}',CGI.SERVER_NAME,'ALL')#
 						-----
 						<cfinclude template="includes/xmlfeed.cfm">
+					<cfelseif isDefined("contentid") AND contentid EQ application.exceptions["unsubID"]>
+						<cfinclude template="../commonfiles/includes/unsub2.cfm">						
 					<cfelse>
 						#Replace(pageinfo.body1, '{server_name}',CGI.SERVER_NAME, 'ALL')#
 						<cfif isDefined("pageinfo.body2") AND pageinfo..body2 NEQ "">
