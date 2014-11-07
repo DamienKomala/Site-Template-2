@@ -310,12 +310,49 @@
 							<h1>Images</h1>
 						</div>
 						<p>Add classes to an <code>&lt;img&gt;</code> element to easily style images in any project.</p>
-						<div class="bs-docs-example bs-docs-example-images"> <img src="holder.js/140x140" class="left" alt="left" /> <img src="holder.js/140x140" class="right" alt="rigt"> <img src="holder.js/770x230" class="img-polaroid" alt="img-polaroid"> </div>
-						<pre class="prettyprint linenums">
+						<div class="bs-docs-example bs-docs-example-images">
+							<img src="holder.js/140x140" class="left" alt="left" />
+							<img src="holder.js/140x140" class="right" alt="rigt">
+							<img src="holder.js/770x230" class="img-polaroid" alt="img-polaroid"> 
+							<pre class="prettyprint linenums">
 &lt;img src=&quot;holder.js/140x140&quot; class=&quot;left&quot; alt=&quot;left&quot; /&gt; 
 &lt;img src=&quot;holder.js/140x140&quot; class=&quot;right&quot; alt=&quot;right&quot;&gt; 
 &lt;img src=&quot;holder.js/770x230&quot; class=&quot;img-polaroid&quot; alt=&quot;img-polaroid&quot;&gt;
 						</pre>
+						<hr />
+						
+							<div class="thumbnail with-caption caption-left">
+								<img src="holder.js/140x140" alt="left" />
+								<small>Another Caption</small>
+							</div>
+							<div class="thumbnail with-caption caption-right">
+								<img src="holder.js/140x140" alt="rigt">
+								<small>Another Caption</small>
+							</div>
+							<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
+							<hr />
+							<div class="thumbnail with-caption">
+								<img src="holder.js/770x230" alt="caption">
+								<small>Caption of the image</small>
+							</div>
+							<pre class="prettyprint linenums">
+&lt;div class=&quot;thumbnail with-caption caption-left&quot;&gt;
+  &lt;img src=&quot;holder.js/140x140&quot; alt=&quot;left&quot; /&gt;
+  &lt;small&gt;Another Caption&lt;/small&gt;
+&lt;/div&gt;
+&lt;div class=&quot;thumbnail with-caption caption-right&quot;&gt;
+  &lt;img src=&quot;holder.js/140x140&quot; alt=&quot;rigt&quot;&gt;
+  &lt;small&gt;Another Caption&lt;/small&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;thumbnail with-caption&quot;&gt;
+  &lt;img src=&quot;holder.js/770x230&quot; alt=&quot;caption&quot;&gt;
+  &lt;small&gt;Caption of the image&lt;/small&gt;
+&lt;/div&gt;
+						</pre>
+							
+						</div>
+						
 					</section>
 					
 					<!-- Columns

@@ -491,6 +491,39 @@ header .slogan {
 }
 
 /*********************************************************************
+	Practice Area Page - Grid style
+*********************************************************************/
+
+a.practice-overlay {
+	display: block;
+	color:#fff;
+	font-family:"Open Sans",sans-serif;
+    position: relative;
+    margin-bottom: 30px;
+}
+a.practice-overlay:hover p {
+	color:#6ab6ed;
+}
+a.practice-overlay img {
+	position:relative;
+}
+a.practice-overlay .caption {
+	background: url("../images/practice-areas/caption.png") repeat scroll left top rgba(0, 0, 0, 0);
+    bottom: 0;
+    color: #fff;
+    left: 0;
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    padding: 0;
+}
+a.practice-overlay .caption p {
+	margin: 5px 10px;
+    font-weight: normal;
+    text-transform: uppercase;
+}
+
+/*********************************************************************
 	Video Player
 *********************************************************************/
 
@@ -685,6 +718,32 @@ img.right {
 	-moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
 	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
 	padding: 0;
+}
+.thumbnail.with-caption {
+	background: #fff;
+    margin: 0 0 20px 0;
+	border-radius:0;
+	display:block;
+}
+.thumbnail.with-caption p {
+	margin: 0;
+	text-align:right;
+	padding-top: 0.5em;
+}
+.thumbnail.with-caption small {
+	text-align: right;
+	display: inline-block;
+	color: #999;
+}
+.thumbnail.with-caption.caption-right {
+	float:right;
+	display:block;
+	margin: 0 0 20px 20px;
+}
+.thumbnail.with-caption.caption-left {
+	float:left;
+	display:block;
+	margin: 0 20px 20px 0;
 }
 
 /*********************************************************************
