@@ -68,6 +68,9 @@ jQuery(document)
 		$('#testimonials-carousel').hover(function () {   
   			$(this).carousel('pause');
 		}),
+		$('#resultsCarousel').carousel({
+			interval: 8000
+		}),
 		
 		/* ------------------- Open all Accordions --------------------- */
 
