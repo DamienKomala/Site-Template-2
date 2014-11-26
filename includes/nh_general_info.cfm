@@ -32,7 +32,7 @@
       </cfloop>
       <tr style="background-color:#clr#;">
         <td>Rating Survey Dates: </td>
-        <td nowrap>#dateformat(nhData.data.date3, 'mm/dd/yy')# - #dateformat(nhData.data.date1, 'mm/dd/yy')#</td>
+        <td nowrap>#dateformat(nhData.data.date3, 'mm/dd/yy')# - #dateformat(nhData.data.lastupdate, 'mm/dd/yy')#</td>
       </tr>
       </cfoutput>
     </tbody>

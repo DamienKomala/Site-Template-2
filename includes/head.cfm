@@ -103,6 +103,7 @@
 	<link href="/css/bootstrap-responsive.css" rel="stylesheet">
 	<link href="/css/local.css" rel="stylesheet">
 	<link href="/src/css/ilightbox.css" rel="stylesheet" />
+	<link type="text/css" href="/css/jquery.dataTables.css" rel="stylesheet" />
 	<!--- start: Java Script --->
 	<script defer src="/js/jquery.min.js"></script>
 	<script defer src="/js/jquery-ui.min.js"></script>
@@ -115,6 +116,7 @@
 	<script defer src="/js/custom.js"></script>
 	<script defer src="/src/js/jquery.mousewheel.js"></script>
 	<script defer src="/src/js/ilightbox.packed.js"></script>
+	<script type="text/javascript" src="/js/jquery.dataTables.js"></script>
 	<script defer src="/js/socialite.min.js"></script>
 	
 <!--[if lt IE 9]>
