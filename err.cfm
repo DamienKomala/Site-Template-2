@@ -1,6 +1,6 @@
 
 
-<cfif isDefined("contentid") AND contentid EQ application.exceptions["settlementID"]>
+<cfif isDefined("contentid") AND isDefined("application.exceptions['settlementID']") AND contentid EQ application.exceptions["settlementID"]>
 	<cfset settlements=application.pageData.getSettlements()>
 </cfif>
 <cfinclude template="includes/head.cfm">
@@ -16,23 +16,21 @@
 <cfset local.source= "Not Yet Categorized">
 <cfif findnocase('msn',host_name)>
 <cfset local.source = "MSN">
-<cfelseif findnocase('google',host_name)>
+<cfelseif findnocase('googlebot',host_name)>
 <cfset local.source = "Google">
 </cfif>
-<cfif local.source NEQ 'Not Yet Categorized'>
+<cfif (local.source EQ 'Google') and (cgi.SERVER_NAME EQ 'www.justice4you.com' or cgi.SERVER_NAME EQ 'wwww.mattar.com' or cgi.SERVER_NAME EQ 'www.mikelewisattorneys.com')>
 <cfmail
-		to = "tech@pmpmg.com,tdevaney@pmpmg.com"
+		to = "tech@pmpmg.com"
 		failto = "failto@attorneycontrolcenter.com"
 		from = "tech@pmpmg.com"
-		subject = "#local.source# - 404 Missing Page on #cgi.SERVER_NAME#"
+		subject = "Googlebot 301 Request for #cgi.SERVER_NAME#"
 		cc = ""
 		type="html"
 		server = "mail.attorneycontrolcenter.com" port="587"
 		username = "leads"
 		password = "coke18!!">
-Offsite Host: #host_name# could not find this page: #cgi.QUERY_STRING#
-
-		</cfmail></cfif></cfif>--->
+#host_name# could not find this page: #cgi.QUERY_STRING#</cfmail></cfif></cfif>--->
 					<img src="/assets/images/404-page-not-found.jpg" class="img-polaroid" alt="page not found"/> 
 						<cfoutput>
 							<cfinclude template="includes/sitemap.txt">

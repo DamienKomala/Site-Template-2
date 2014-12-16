@@ -2,7 +2,7 @@
 <cfsilent>
 	<cfif isDefined("contentid") AND contentid NEQ "">
 		<cfset pageinfo = application.pagedata.getContentPage(contentid=#contentid#)>
-		<cfif contentid EQ application.exceptions["blgID"]>
+		<cfif isDefined('application.exceptions["blgID"]') AND contentid EQ application.exceptions["blgID"]>
 			<cfset blogtypes=application.pagedata.getBlogTypes()>
 		</cfif>
 	<cfelseif isDefined("attorneyid") AND attorneyid NEQ "">

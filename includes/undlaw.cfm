@@ -1,6 +1,6 @@
-<cfif contentid EQ application.exceptions['understandID']>
+<cfif isDefined('application.exceptions['understandID']') AND contentid EQ application.exceptions['understandID']>
 	<cfset News=application.pageData.getNews(nid="#application.exceptions['understandID']#")>
-<cfelseif contentid EQ application.exceptions['truckaccID']>
+<cfelseif isDefined('application.exceptions['truckaccID']') AND contentid EQ application.exceptions['truckaccID']>
 	<cfset News=application.pageData.getNews(nid="#application.exceptions['truckaccID']#")>
 </cfif>
 <cfquery name="reordernews" dbtype="query">

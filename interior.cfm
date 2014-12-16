@@ -6,7 +6,7 @@
 <body class="interior">
 <cfinclude template="includes/header.cfm">
 <cfoutput>
-<cfif (isdefined("contentid") AND contentid EQ application.exceptions["workcompID"]) OR (isDefined("pageinfo.parentid") AND pageinfo.parentid EQ application.exceptions["workcompID"])>
+<cfif (isdefined("contentid") AND isDefined('application.exceptions["workcompID"]') AND contentid EQ application.exceptions["workcompID"]) OR (isDefined("pageinfo.parentid") AND isDefined('application.exceptions["workcompID"]') AND pageinfo.parentid EQ application.exceptions["workcompID"])>
 	<div class="container workers-comp">
 		<div class="row-fluid">
 			<div class="span12">
@@ -47,22 +47,22 @@
 						<h1>#pageinfo..title#</h1>
 						<cfinclude template="includes/attorney.cfm">
 					</cfif>
-					<cfif isDefined("contentid") AND contentid EQ application.exceptions["resultsID"]>
+					<cfif isDefined("contentid") AND isDefined('application.exceptions["resultsID"]') AND contentid EQ application.exceptions["resultsID"]>
 						#Replace(pageinfo.body1,'{server_name}',CGI.SERVER_NAME,'ALL')#
 						<cfinclude template="includes/results.cfm">
 					<cfelseif isDefined("attorneyid")>
 						
-					<cfelseif (isDefined("contentid") AND contentid EQ application.exceptions["blgID"])>
+					<cfelseif (isDefined("contentid") AND isDefined('application.exceptions["blgID"]') AND contentid EQ application.exceptions["blgID"])>
 						#Replace(pageinfo.body1,'{server_name}',CGI.SERVER_NAME,'ALL')#
 						<cfinclude template="includes/blog.cfm">
 					<cfelseif isDefined("blogid")>
-					<cfelseif isDefined("contentid") AND contentid EQ application.exceptions["contactID"]>
+					<cfelseif isDefined("contentid") AND isDefined('application.exceptions["contactID"]') AND contentid EQ application.exceptions["contactID"]>
 						#Replace(pageinfo.body1, '{server_name}',CGI.SERVER_NAME, 'ALL')#
 						<cfinclude template="includes/contact_caseevaluation.cfm">
 						<cfif isDefined("pageinfo.body2") AND pageinfo..body2 NEQ "">
 							#Replace(pageinfo.body2, '{server_name}',CGI.SERVER_NAME, 'ALL')#
 						</cfif>
-					<cfelseif isDefined("contentid") AND contentid EQ application.exceptions["newsID"]>
+					<cfelseif isDefined("contentid") AND isDefined('application.exceptions["newsID"]') AND contentid EQ application.exceptions["newsID"]>
 						#Replace(pageinfo.body1,'{server_name}',CGI.SERVER_NAME,'ALL')#
 						<cfset News=application.pageData.getNews()>
 						<cfif News.recordcount GT 0>

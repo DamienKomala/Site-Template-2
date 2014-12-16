@@ -45,7 +45,7 @@
 			<cfinclude template="settlements.cfm">
 			</cfif>
 			
-			<cfif isDefined("contentid")  AND (contentID EQ application.exceptions["homeID"] OR contentID EQ application.exceptions["newsID"])>
+			<cfif isDefined("contentid") AND ((isDefined('application.exceptions["homeID"]') AND contentID EQ application.exceptions["homeID"]) OR (isDefined('application.exceptions["newsID"]') AND contentID EQ application.exceptions["newsID"]))>
 				<cfelse>
 				<cfif NOT IsDefined('attorneyid')>
 				<cfinclude template="addlresources.cfm">

@@ -79,6 +79,6 @@
 <!--------------------------------------------------
 Remarketing tags may not be associated with personally identifiable information or placed on pages related to sensitive categories. See more information and instructions on how to setup the tag on: http://google.com/ads/remarketingsetup
 --------------------------------------------------->
-<cfif isDefined("contentid") AND contentid EQ application.exceptions["thanksID"]>
+<cfif isDefined("contentid") AND isDefined('application.exceptions["thanksID"]') AND contentid EQ application.exceptions["thanksID"]>
 </cfif>
 

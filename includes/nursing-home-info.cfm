@@ -118,14 +118,15 @@
 							<div class="wrapper">
 								<div class="widget">
 									<div class="whead" style="padding-left:12px;">
-										<h4>#nhData.data.facName# - #application.apnhstateabbr# Nursing Home Deficiencies: Reported from #dateformat(nhData.deficiencydts.startdt, 'mm/dd/yyyy')# to #dateformat(nhData.deficiencydts.enddt, 'mm/dd/yyyy')#</h4>
+										<div class="pull-right">Last Updated: <span class="text-success">#monthasstring(month(now()))# 01, #year(now())#</span></div>
+										<h4>#nhData.data.facName# - #application.apnhstateabbr# Nursing Home Deficiencies: Reported from #dateformat(nhData.deficiencydts.startdt, 'mm/dd/yyyy')# to #dateformat(nhData.data.lastupdate, 'mm/dd/yyyy')#</h4>
 										<div class="clear"></div>
 									</div>
-									<div id="dyn"> <a class="tOptions" title="Options"><img src="images/icons/options.png" alt="" /></a>
+									<div id="dyn"> <!---<a class="tOptions" title="Options"><img src="images/icons/options.png" alt="" /></a>--->
 										<table cellpadding="0" cellspacing="0" border="0" class="dTable table-bordered table-striped" id="dynamic">
 											<thead>
 												<tr>
-													<th>Survey Date</th>
+													<th>Report Date</th>
 													<th>Nursing Home Failed To or Did Not Provide:</th>
 													<th>Scope</th>
 													<th>Severity</th>
