@@ -11,7 +11,7 @@
 		<div class="row-fluid">
 			<section class="span8">
 				<div class="center-content">
-				<!---<h1>404 - Page Not Found</h1><cfheader statuscode="410" statustext="File Gone"> <cfset inet_address = CreateObject("java", "java.net.InetAddress")> 
+				<!---<h1>404 - Page Not Found</h1><cfheader statuscode="404" statustext="File Not Found"> <cfset inet_address = CreateObject("java", "java.net.InetAddress")> 
 <cfset host_name = inet_address.getByName("#cgi.REMOTE_HOST#").getHostName()><cfif host_name NEQ '50-192-156-189-static.hfc.comcastbusiness.net'>
 <cfset local.source= "Not Yet Categorized">
 <cfif findnocase('msn',host_name)>
@@ -19,12 +19,20 @@
 <cfelseif findnocase('googlebot',host_name)>
 <cfset local.source = "Google">
 </cfif>
-<cfif (local.source EQ 'Google') and (cgi.SERVER_NAME EQ 'www.justice4you.com' or cgi.SERVER_NAME EQ 'wwww.mattar.com' or cgi.SERVER_NAME EQ 'www.mikelewisattorneys.com')>
-<cfmail
-		to = "tech@pmpmg.com"
+<cfif (local.source EQ 'MSN')>
+<cfquery name="InsertSpiderFix" datasource="pmpmg">
+Insert into spiderfix(spiderfixsitename,spiderfixpage,spiderfixspiderid)
+values('#cgi.server_name#','#cgi.QUERY_STRING#',2)
+</cfquery>
+</cfif><cfif (local.source EQ 'Google')>
+<cfquery name="InsertSpiderFix" datasource="pmpmg">
+Insert into spiderfix(spiderfixsitename,spiderfixpage)
+values('#cgi.server_name#','#cgi.QUERY_STRING#')
+</cfquery><cfmail
+		to = "tdevaney@pmpmg.com,dstrompf@pmpmg.com"
 		failto = "failto@attorneycontrolcenter.com"
 		from = "tech@pmpmg.com"
-		subject = "Googlebot 301 Request for #cgi.SERVER_NAME#"
+		subject = "Googlebot 301 #cgi.SERVER_NAME# - #cgi.QUERY_STRING#"
 		cc = ""
 		type="html"
 		server = "mail.attorneycontrolcenter.com" port="587"
