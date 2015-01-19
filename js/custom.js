@@ -27,10 +27,19 @@ jQuery(document)
 		$('.tooltip').tooltip()
 		$('.popover').popover()
 		
-		$("a[data-toggle=popover]")
-			.popover()
+		$('a[data-toggle=popover]')
 			.click(function(e) {
 				e.preventDefault()
+			  if( !$(".popover").is(':visible') ) {
+				  var el = this;
+				  $(el).popover('show');
+				  $(".popover-inner > h3").append('<span class="close icon icon-remove"></span>')
+						.find('.close').on('click', function(e) {
+						e.preventDefault();
+						$(el).popover('hide');
+					}
+			  );
+		  }
 		});
 		 
 		$('.workers-comp').tooltip({
