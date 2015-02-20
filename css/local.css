@@ -949,6 +949,42 @@ blockquote.large {
 .results-table .pricing-list li:nth-child(odd) {
     background: #f7f7f7;
 }
+/*********************************************************************
+	Results Carousel
+*********************************************************************/
+
+#resultsCarousel  {
+	font-family: 'Muli', sans-serif;
+    font-style: italic;
+    font-weight: bold;
+    text-align: left;
+    margin-bottom: 0;
+}
+#resultsCarousel .result {
+	/*border-bottom: 4px solid #186692;*/
+    color: #186692;
+    font-size: 40px;
+    display: inline-block;
+}
+#resultsCarousel .result-text, #resultsCarousel .result-text a {
+	font-size:16px;
+	color: #777;
+}
+#resultsCarousel .result-text a:hover {
+	text-decoration:none;
+}
+#resultsCarousel .item {
+	background: url(../images/results-bg.jpg) bottom left no-repeat;
+	padding: 20px 0 0;
+}
+#resultsCarousel .carousel-control {
+	opacity:0.25;
+	margin-top: -7px;
+	font-style:normal;
+}
+#resultsCarousel .carousel-control:hover, #resultsCarousel .carousel-control:focus {
+	opacity:1.00;
+}
 
 /*********************************************************************
 	Search page (Google) Override
